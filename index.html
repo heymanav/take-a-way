@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take-a-Way</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <header class="headertxt">
+        <a class="menu" href="#">Home</a>
+        <a class="menu" href="#Menu">Menu</a>
+        <a class="menu" href="#Add_Order">Add Order</a>
+        <a class="menu" href="#Records">Records</a>
+        <button class="btn" id="Close" onclick="exit()"> Logout </button>
+        <div class="content">
+            <h1>Take A Way</h1>
+            <p>"There has never been a sadness that can’t be cured with breakfast foods” -Ron Swanson</p>
+        </div>
+    </header>
+    <div>
+        <h1 id="Menu" class="title">Menu</h1>
+        <table>
+            <tr>
+              <th>Items</th>
+              <th>Rate (in Rs.)</th>
+            </tr>
+            <tr>
+              <td>Tea</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>Coffee</td>
+              <td>20</td>
+            </tr>
+            <tr>
+              <td>Samosa</td>
+              <td>25</td>
+            </tr>
+            <tr>
+              <td>Tarri Poha</td>
+              <td>20</td>
+            </tr>
+          </table>
+    </div>
+
+    <div>
+        <h1 id="Add_Order" class="title">Add Order</h1>
+        <div class="form" id="form">
+          <div class="form_input">
+            <label>Items :</label>
+            <select name="sel1" id="sel1" onchange="changePrice(this.id)">
+              <option value="">--Choose Items--</option>
+              <option value="Tea">TEA</option>
+              <option value="Coffee">COFFEE</option>
+              <option value="Samosa">SAMOSA</option>
+              <option value="Tarri Poha">TARRI POHA</option>
+            </select>
+          </div>
+          <div class="form_input">
+              <label>Price :</label>
+              <input type="text" disabled  placeholder="Price" id="price">
+          </div>
+          <div class="form_input">
+            <label>Quantity :</label>
+            <select name="sel2" id="sel2" onchange="totalAmt(this.id)">
+              <option value="">--Choose Quantity--</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="form_input">
+            <label>Total Amount :</label>
+            <input type="text" disabled placeholder="Total Amount" id="totalAmt">
+          </div>
+          <div id="btnao">
+            <button class="btn" id="btn2" style="float: none; margin-left: 40%;" onclick="submit()">Submit</button>
+        </div>
+      </div>
+    </div>
+    
+    <div>
+      <h1 id="Records" class="title">Records</h1>
+      <table id="display">
+        <tr>
+          <th>Items</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total Amount</th>
+        </tr>
+      </table>
+    </div>
+</body>
+</html>
